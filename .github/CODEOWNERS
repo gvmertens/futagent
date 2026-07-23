@@ -1,0 +1,8 @@
+# Responsável atual pelo produto e pelo repositório.
+* @gvmertens
+
+# Mudanças de especificação, segurança, CI e infraestrutura exigem o owner.
+/specs/ @gvmertens
+/SECURITY.md @gvmertens
+/.github/ @gvmertens
+/infra/ @gvmertens

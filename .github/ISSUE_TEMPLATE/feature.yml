@@ -1,0 +1,29 @@
+name: Feature baseada em especificação
+description: Entrega rastreável a um requisito FUT-*
+title: "[FUT-___] "
+labels: [feature, needs-triage]
+body:
+  - type: input
+    id: requirement
+    attributes:
+      label: Requisito
+      description: ID e link para a especificação em specs/.
+      placeholder: FUT-010 — specs/010-preferences.md
+    validations: { required: true }
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado esperado
+    validations: { required: true }
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceitação
+      description: Cenários observáveis em Given/When/Then.
+    validations: { required: true }
+  - type: textarea
+    id: risks
+    attributes:
+      label: Privacidade, segurança e observabilidade
+    validations: { required: true }
+

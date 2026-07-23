@@ -1,0 +1,23 @@
+name: Bug
+description: Comportamento reproduzível que viola uma especificação
+title: "[Bug] "
+labels: [bug, needs-triage]
+body:
+  - type: input
+    id: requirement
+    attributes: { label: Requisito afetado, placeholder: FUT-001 }
+  - type: textarea
+    id: reproduce
+    attributes: { label: Como reproduzir }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Esperado versus observado }
+    validations: { required: true }
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade
+      options: [P0 — indisponibilidade/segurança, P1 — crítico, P2 — normal, P3 — baixo]
+    validations: { required: true }
+

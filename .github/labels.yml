@@ -1,0 +1,17 @@
+- name: epic
+  color: "3E4B9E"
+- name: feature
+  color: "1D76DB"
+- name: bug
+  color: "D73A4A"
+- name: needs-triage
+  color: "FBCA04"
+- name: security
+  color: "B60205"
+- name: backend
+  color: "6F42C1"
+- name: frontend
+  color: "0E8A16"
+- name: infrastructure
+  color: "5319E7"
+
