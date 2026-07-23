@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: futagend-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  tracing:
+    sampling:
+      probability: ${OTEL_TRACES_SAMPLER_ARG:1.0}
+  otlp:
+    tracing:
+      endpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:http://localhost:4318}/v1/traces
+futagend:
+  ai:
+    enabled: ${FUTAGEND_AI_ENABLED:false}
+  mcp:
+    calendar-url: ${GOOGLE_CALENDAR_MCP_URL:}
+    weather-url: ${WEATHER_MCP_URL:}
+    github-url: ${GITHUB_MCP_URL:}
+
